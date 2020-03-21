@@ -22,10 +22,10 @@ class ArrayGeneratorLibrary:
         	return b
         else:
         	return a
-#invalid function
+        	
     @keyword("Find maximum")
     def find_max(self, a: int, b: int):
-        if a == b:
+        if a < b:
         	return b
         else:
         	return a

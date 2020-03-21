@@ -32,29 +32,26 @@ Generatiing valid array using decorator.
     Should be True    ${min} >= ${1}
     Should be True    ${max} <= ${10}
 
-#Пример передачи части названия метода, в виде параметра. Цикл.
-#   [Tags]          HardTest
-  #  ${types}        Create list    чётные    нечётные
-   # ${array}        Сгенерировать 5 чисел, от 12 до 28
-    #FOR   ${type}   IN    @{types}
-     #   ${numbers}      Run keyword    Найти ${type} числа в списке    ${array}
+Generating valid array and search even and odd numbers.
+    [Tags]          HardTest
+    ${types}        Create list    even   odd
+    ${array}        Generate 100 numbers, from 1 to 10
+    FOR   ${type}   IN    @{types}
+        ${numbers}      Run keyword     Find ${type} number in the list   ${array}
+        ${length}         Evaluate    len($numbers)
+        Should be True    ${length} >= ${1}
+    END
 
-  #      log to console     ${numbers}
-   # END
 
-# Using the decorator.
-#     ${negs}         Find negative numbers
-#     Generate integer array  10  1  10
-#     log to console  ${negs}
 
 *** Keywords ***
 
-Find even number in the list.
+Find even number in the list
     [Arguments]     ${list}
     ${evens}        Evaluate    [i for i in $list if i % 2 == 0]
     [Return]        ${evens}
 
-Find odd number in the list.
+Find odd number in the list
     [Arguments]     ${list}
     ${odds}         Evaluate    [i for i in $list if i % 2 != 0]
     [Return]        ${odds}
