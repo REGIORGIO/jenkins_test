@@ -85,17 +85,6 @@ Generate valid poisson array
     Should be True    abs(${d_theory} - ${d_practice}) / max(${d_practice}, ${d_theory}) <= ${e}
 
 
-# Generating valid array and search even and odd numbers.
-#     [Tags]          HardTest
-#     ${types}        Create list    even   odd
-#     ${array}        Generate 100 numbers, from 1 to 10
-#     FOR   ${type}   IN    @{types}
-#         ${numbers}      Run keyword     Find ${type} number in the list   ${array}
-#         ${length}         Evaluate    len($numbers)
-#         Should be True    ${length} >= ${1}
-#     END
-
-
 
 *** Keywords ***
 
@@ -108,12 +97,3 @@ Generate poisson array with mu ${mu} and size ${size}
     ${result}       Generate poisson array     ${mu}     ${size}
     [Return]        ${result}
 
-# Generate ${n} numbers, from ${from} to ${to}
-#     ${result}       Generate integer array    ${n}    ${from}    ${to}
-#     [Return]        ${result}
-
-# Find negative numbers
-#     [Arguments]     ${keyword}    @{args}   &{kwargs}
-#     ${list}         Run keyword    ${keyword}    @{args}    &{kwargs}
-#     ${negs}         Evaluate    [i for i in $list if i < 0]
-#     [Return]        ${negs}

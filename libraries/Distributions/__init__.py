@@ -22,30 +22,3 @@ class Distributions:
     def get_poisson_distribution(self, mu, size):
     # mu = 10
         return poisson.rvs(mu=mu, size=size)
-
-# print('мат. ожидание(теория) = ', (n * p))
-# print('дисперсия(теория) = ', (p * n * (1 - p)))
-# m = conversions.mean()
-# print('мат. ожидание(практика) = ', m)
-# d = np.var(conversions)
-# print('дисперсия(практика) = ', d)
-#
-#     
-
-# # print("геометрический")
-# # print('мат. ожидание(теория) = ', 1 / p)
-# # print('дисперсия(теория) = ', (1 - p)/(p ** 2))
-# # m = conversions.mean()
-# # print('мат. ожидание(практика) = ', m)
-# # d = np.var(conversions)
-# # print('дисперсия(практика) = ', d)
-#     
-# print("Пуассона")
-# print('мат. ожидание(теория) = ', mu)
-# print('дисперсия(теория) = ', mu)
-# m = conversions.mean()
-# print('мат. ожидание(практика) = ', m)
-# d = np.var(conversions)
-# print('дисперсия(практика) = ', d)
-# graph(conversions)
-
