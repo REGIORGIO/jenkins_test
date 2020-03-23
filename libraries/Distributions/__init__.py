@@ -16,9 +16,8 @@ class Distributions:
 
     @keyword("Generate geometric array")
     def get_geometric_distribution(self, p, size):
-       return np.random.geometric(p, size=size)
+        return np.random.geometric(p, size=size)
 
     @keyword("Generate poisson array")
     def get_poisson_distribution(self, mu, size):
-    # mu = 10
         return poisson.rvs(mu=mu, size=size)
