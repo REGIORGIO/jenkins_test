@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20200323 20:50:51.522" rpa="false" generator="Robot 3.1.2 (Python 3.5.3 on linux)">
+<robot generator="Robot 3.1.2 (Python 3.5.3 on linux)" rpa="false" generated="20200323 20:51:16.554">
 <suite id="s1" name="Array Test &amp; Number Test &amp; Statistics Test">
-<suite source="/var/lib/jenkins/workspace/robot/array_test.robot" id="s1-s1" name="Array Test">
+<suite id="s1-s1" source="/var/lib/jenkins/workspace/robot/array_test.robot" name="Array Test">
 <test id="s1-s1-t1" name="Generatiing valid array.">
-<kw library="libraries.ArrayGeneratorLibrary" name="Generate integer array">
+<kw name="Generate integer array" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${size}</arg>
 <arg>${minimum}</arg>
@@ -12,10 +12,10 @@
 <assign>
 <var>${array}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.622">${array} = [7, 9, 1, 10, 6, 5, 3, 8, 2, 3, 4, 4, 8, 8, 2, 5, 8, 1, 9, 7, 9, 9, 8, 2, 5, 2, 6, 4, 8, 5, 1, 5, 1, 3, 6, 5, 5, 7, 9, 8, 2, 4, 2, 10, 4, 6, 9, 9, 9, 10, 9, 9, 10, 3, 1, 1, 3, 7, 9, 10, 2, 4, 2, 8, 3,...</msg>
-<status starttime="20200323 20:50:51.621" endtime="20200323 20:50:51.622" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.586" level="INFO">${array} = [4, 4, 7, 9, 8, 3, 6, 5, 3, 8, 7, 3, 3, 5, 7, 10, 8, 10, 10, 10, 6, 2, 7, 10, 7, 6, 6, 6, 9, 10, 8, 9, 7, 5, 8, 5, 3, 5, 4, 8, 3, 4, 7, 9, 7, 3, 4, 6, 8, 7, 1, 10, 8, 2, 7, 6, 6, 4, 3, 10, 8, 10, 2, 3...</msg>
+<status status="PASS" endtime="20200323 20:51:16.586" starttime="20200323 20:51:16.586"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($array)</arg>
@@ -23,10 +23,10 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.625">${length} = 100</msg>
-<status starttime="20200323 20:50:51.622" endtime="20200323 20:50:51.625" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.590" level="INFO">${length} = 100</msg>
+<status status="PASS" endtime="20200323 20:51:16.590" starttime="20200323 20:51:16.587"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>min($array)</arg>
@@ -34,10 +34,10 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.626">${min} = 1</msg>
-<status starttime="20200323 20:50:51.625" endtime="20200323 20:50:51.626" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.591" level="INFO">${min} = 1</msg>
+<status status="PASS" endtime="20200323 20:51:16.591" starttime="20200323 20:51:16.590"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>max($array)</arg>
@@ -45,42 +45,42 @@
 <assign>
 <var>${max}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.627">${max} = 10</msg>
-<status starttime="20200323 20:50:51.626" endtime="20200323 20:50:51.627" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.591" level="INFO">${max} = 10</msg>
+<status status="PASS" endtime="20200323 20:51:16.591" starttime="20200323 20:51:16.591"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${length}</arg>
 <arg>${size}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.627" endtime="20200323 20:50:51.627" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.592" starttime="20200323 20:51:16.592"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${min} &gt;= ${minimum}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.627" endtime="20200323 20:50:51.628" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.592" starttime="20200323 20:51:16.592"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${max} &lt;= ${maximum}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.628" endtime="20200323 20:50:51.628" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.593" starttime="20200323 20:51:16.592"></status>
 </kw>
 <tags>
 <tag>SimpleTest</tag>
 </tags>
-<status starttime="20200323 20:50:51.620" endtime="20200323 20:50:51.628" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:16.593" starttime="20200323 20:51:16.585"></status>
 </test>
 <test id="s1-s1-t2" name="Generatiing valid array using decorator.">
 <kw name="Generate 10 numbers, from 1 to 10">
 <assign>
 <var>${array}</var>
 </assign>
-<kw library="libraries.ArrayGeneratorLibrary" name="Generate integer array">
+<kw name="Generate integer array" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${n}</arg>
 <arg>${from}</arg>
@@ -89,13 +89,13 @@
 <assign>
 <var>${result}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.630">${result} = [7, 4, 6, 6, 10, 3, 5, 9, 8, 10]</msg>
-<status starttime="20200323 20:50:51.630" endtime="20200323 20:50:51.630" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.595" level="INFO">${result} = [8, 8, 6, 3, 1, 3, 9, 9, 6, 9]</msg>
+<status status="PASS" endtime="20200323 20:51:16.595" starttime="20200323 20:51:16.594"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:51.630">${array} = [7, 4, 6, 6, 10, 3, 5, 9, 8, 10]</msg>
-<status starttime="20200323 20:50:51.629" endtime="20200323 20:50:51.630" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.595" level="INFO">${array} = [8, 8, 6, 3, 1, 3, 9, 9, 6, 9]</msg>
+<status status="PASS" endtime="20200323 20:51:16.595" starttime="20200323 20:51:16.594"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($array)</arg>
@@ -103,10 +103,10 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.631">${length} = 10</msg>
-<status starttime="20200323 20:50:51.630" endtime="20200323 20:50:51.631" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.596" level="INFO">${length} = 10</msg>
+<status status="PASS" endtime="20200323 20:51:16.596" starttime="20200323 20:51:16.595"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>min($array)</arg>
@@ -114,10 +114,10 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.632">${min} = 3</msg>
-<status starttime="20200323 20:50:51.631" endtime="20200323 20:50:51.632" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.597" level="INFO">${min} = 1</msg>
+<status status="PASS" endtime="20200323 20:51:16.597" starttime="20200323 20:51:16.596"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>max($array)</arg>
@@ -125,38 +125,38 @@
 <assign>
 <var>${max}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.633">${max} = 10</msg>
-<status starttime="20200323 20:50:51.632" endtime="20200323 20:50:51.633" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.598" level="INFO">${max} = 9</msg>
+<status status="PASS" endtime="20200323 20:51:16.598" starttime="20200323 20:51:16.597"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${length}</arg>
 <arg>${10}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.633" endtime="20200323 20:50:51.633" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.598" starttime="20200323 20:51:16.598"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${min} &gt;= ${1}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.633" endtime="20200323 20:50:51.634" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.599" starttime="20200323 20:51:16.598"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${max} &lt;= ${10}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.634" endtime="20200323 20:50:51.634" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.599" starttime="20200323 20:51:16.599"></status>
 </kw>
 <tags>
 <tag>MiddleTest</tag>
 </tags>
-<status starttime="20200323 20:50:51.629" endtime="20200323 20:50:51.634" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:16.599" starttime="20200323 20:51:16.593"></status>
 </test>
 <test id="s1-s1-t3" name="Generating valid array and search even and odd numbers.">
-<kw library="BuiltIn" name="Create List">
+<kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <arguments>
 <arg>even</arg>
@@ -165,14 +165,14 @@
 <assign>
 <var>${types}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.635">${types} = ['even', 'odd']</msg>
-<status starttime="20200323 20:50:51.635" endtime="20200323 20:50:51.635" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.600" level="INFO">${types} = ['even', 'odd']</msg>
+<status status="PASS" endtime="20200323 20:51:16.600" starttime="20200323 20:51:16.600"></status>
 </kw>
 <kw name="Generate 100 numbers, from 1 to 10">
 <assign>
 <var>${array}</var>
 </assign>
-<kw library="libraries.ArrayGeneratorLibrary" name="Generate integer array">
+<kw name="Generate integer array" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${n}</arg>
 <arg>${from}</arg>
@@ -181,15 +181,15 @@
 <assign>
 <var>${result}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.636">${result} = [7, 9, 1, 1, 4, 4, 6, 3, 6, 9, 3, 7, 8, 5, 2, 4, 4, 5, 9, 10, 4, 5, 4, 2, 8, 8, 1, 9, 6, 3, 5, 2, 3, 10, 7, 3, 1, 6, 7, 10, 4, 8, 5, 2, 5, 3, 9, 5, 9, 6, 4, 10, 6, 3, 5, 10, 10, 6, 4, 3, 8, 9, 1, 6, 5...</msg>
-<status starttime="20200323 20:50:51.636" endtime="20200323 20:50:51.636" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.601" level="INFO">${result} = [10, 3, 4, 5, 7, 3, 10, 3, 1, 8, 8, 2, 10, 1, 4, 6, 9, 1, 1, 9, 4, 2, 2, 2, 2, 3, 4, 6, 4, 1, 2, 1, 5, 7, 2, 8, 2, 10, 8, 4, 9, 2, 5, 4, 1, 1, 4, 6, 3, 4, 3, 2, 3, 4, 1, 4, 2, 3, 4, 3, 4, 6, 8, 6, 6, ...</msg>
+<status status="PASS" endtime="20200323 20:51:16.601" starttime="20200323 20:51:16.601"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:51.636">${array} = [7, 9, 1, 1, 4, 4, 6, 3, 6, 9, 3, 7, 8, 5, 2, 4, 4, 5, 9, 10, 4, 5, 4, 2, 8, 8, 1, 9, 6, 3, 5, 2, 3, 10, 7, 3, 1, 6, 7, 10, 4, 8, 5, 2, 5, 3, 9, 5, 9, 6, 4, 10, 6, 3, 5, 10, 10, 6, 4, 3, 8, 9, 1, 6, 5...</msg>
-<status starttime="20200323 20:50:51.635" endtime="20200323 20:50:51.636" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.601" level="INFO">${array} = [10, 3, 4, 5, 7, 3, 10, 3, 1, 8, 8, 2, 10, 1, 4, 6, 9, 1, 1, 9, 4, 2, 2, 2, 2, 3, 4, 6, 4, 1, 2, 1, 5, 7, 2, 8, 2, 10, 8, 4, 9, 2, 5, 4, 1, 1, 4, 6, 3, 4, 3, 2, 3, 4, 1, 4, 2, 3, 4, 3, 4, 6, 8, 6, 6, ...</msg>
+<status status="PASS" endtime="20200323 20:51:16.601" starttime="20200323 20:51:16.600"></status>
 </kw>
 <kw name="${type} IN [ @{types} ]" type="for">
 <kw name="${type} = even" type="foritem">
-<kw library="BuiltIn" name="Run Keyword">
+<kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
 <arguments>
 <arg>Find ${type} number in the list</arg>
@@ -202,7 +202,7 @@
 <arguments>
 <arg>${array}</arg>
 </arguments>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>[i for i in $list if i % 2 == 0]</arg>
@@ -210,15 +210,15 @@
 <assign>
 <var>${evens}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.639">${evens} = [4, 4, 6, 6, 8, 2, 4, 4, 10, 4, 4, 2, 8, 8, 6, 2, 10, 6, 10, 4, 8, 2, 6, 4, 10, 6, 10, 10, 6, 4, 8, 6, 6, 6, 10, 6, 6, 6, 4, 4, 4, 8, 4, 4, 10, 8, 8, 10, 10]</msg>
-<status starttime="20200323 20:50:51.638" endtime="20200323 20:50:51.639" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.604" level="INFO">${evens} = [10, 4, 10, 8, 8, 2, 10, 4, 6, 4, 2, 2, 2, 2, 4, 6, 4, 2, 2, 8, 2, 10, 8, 4, 2, 4, 4, 6, 4, 2, 4, 4, 2, 4, 4, 6, 8, 6, 6, 8, 8, 10, 2, 2, 10, 8, 6, 10, 10, 4, 6, 10, 4, 2, 10]</msg>
+<status status="PASS" endtime="20200323 20:51:16.604" starttime="20200323 20:51:16.603"></status>
 </kw>
-<status starttime="20200323 20:50:51.638" endtime="20200323 20:50:51.639" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.605" starttime="20200323 20:51:16.603"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:51.640">${numbers} = [4, 4, 6, 6, 8, 2, 4, 4, 10, 4, 4, 2, 8, 8, 6, 2, 10, 6, 10, 4, 8, 2, 6, 4, 10, 6, 10, 10, 6, 4, 8, 6, 6, 6, 10, 6, 6, 6, 4, 4, 4, 8, 4, 4, 10, 8, 8, 10, 10]</msg>
-<status starttime="20200323 20:50:51.637" endtime="20200323 20:50:51.640" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.605" level="INFO">${numbers} = [10, 4, 10, 8, 8, 2, 10, 4, 6, 4, 2, 2, 2, 2, 4, 6, 4, 2, 2, 8, 2, 10, 8, 4, 2, 4, 4, 6, 4, 2, 4, 4, 2, 4, 4, 6, 8, 6, 6, 8, 8, 10, 2, 2, 10, 8, 6, 10, 10, 4, 6, 10, 4, 2, 10]</msg>
+<status status="PASS" endtime="20200323 20:51:16.605" starttime="20200323 20:51:16.602"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($numbers)</arg>
@@ -226,20 +226,20 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.640">${length} = 49</msg>
-<status starttime="20200323 20:50:51.640" endtime="20200323 20:50:51.640" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.606" level="INFO">${length} = 55</msg>
+<status status="PASS" endtime="20200323 20:51:16.606" starttime="20200323 20:51:16.605"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${length} &gt;= ${1}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.641" endtime="20200323 20:50:51.641" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.606" starttime="20200323 20:51:16.606"></status>
 </kw>
-<status starttime="20200323 20:50:51.637" endtime="20200323 20:50:51.641" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.606" starttime="20200323 20:51:16.602"></status>
 </kw>
 <kw name="${type} = odd" type="foritem">
-<kw library="BuiltIn" name="Run Keyword">
+<kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
 <arguments>
 <arg>Find ${type} number in the list</arg>
@@ -252,7 +252,7 @@
 <arguments>
 <arg>${array}</arg>
 </arguments>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>[i for i in $list if i % 2 != 0]</arg>
@@ -260,15 +260,15 @@
 <assign>
 <var>${odds}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.642">${odds} = [7, 9, 1, 1, 3, 9, 3, 7, 5, 5, 9, 5, 1, 9, 3, 5, 3, 7, 3, 1, 7, 5, 5, 3, 9, 5, 9, 3, 5, 3, 9, 1, 5, 7, 9, 7, 7, 5, 7, 7, 5, 1, 7, 5, 7, 1, 7, 1, 9, 5, 1]</msg>
-<status starttime="20200323 20:50:51.642" endtime="20200323 20:50:51.643" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.608" level="INFO">${odds} = [3, 5, 7, 3, 3, 1, 1, 9, 1, 1, 9, 3, 1, 1, 5, 7, 9, 5, 1, 1, 3, 3, 3, 1, 3, 3, 1, 1, 9, 9, 5, 3, 5, 5, 1, 3, 3, 5, 3, 9, 9, 3, 1, 1, 5]</msg>
+<status status="PASS" endtime="20200323 20:51:16.608" starttime="20200323 20:51:16.607"></status>
 </kw>
-<status starttime="20200323 20:50:51.641" endtime="20200323 20:50:51.643" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.608" starttime="20200323 20:51:16.607"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:51.643">${numbers} = [7, 9, 1, 1, 3, 9, 3, 7, 5, 5, 9, 5, 1, 9, 3, 5, 3, 7, 3, 1, 7, 5, 5, 3, 9, 5, 9, 3, 5, 3, 9, 1, 5, 7, 9, 7, 7, 5, 7, 7, 5, 1, 7, 5, 7, 1, 7, 1, 9, 5, 1]</msg>
-<status starttime="20200323 20:50:51.641" endtime="20200323 20:50:51.643" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.608" level="INFO">${numbers} = [3, 5, 7, 3, 3, 1, 1, 9, 1, 1, 9, 3, 1, 1, 5, 7, 9, 5, 1, 1, 3, 3, 3, 1, 3, 3, 1, 1, 9, 9, 5, 3, 5, 5, 1, 3, 3, 5, 3, 9, 9, 3, 1, 1, 5]</msg>
+<status status="PASS" endtime="20200323 20:51:16.608" starttime="20200323 20:51:16.606"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($numbers)</arg>
@@ -276,31 +276,31 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.644">${length} = 51</msg>
-<status starttime="20200323 20:50:51.643" endtime="20200323 20:50:51.644" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.609" level="INFO">${length} = 45</msg>
+<status status="PASS" endtime="20200323 20:51:16.609" starttime="20200323 20:51:16.608"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${length} &gt;= ${1}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.644" endtime="20200323 20:50:51.644" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.609" starttime="20200323 20:51:16.609"></status>
 </kw>
-<status starttime="20200323 20:50:51.641" endtime="20200323 20:50:51.644" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.609" starttime="20200323 20:51:16.606"></status>
 </kw>
-<status starttime="20200323 20:50:51.636" endtime="20200323 20:50:51.644" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.609" starttime="20200323 20:51:16.602"></status>
 </kw>
 <tags>
 <tag>HardTest</tag>
 </tags>
-<status starttime="20200323 20:50:51.634" endtime="20200323 20:50:51.644" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:16.609" starttime="20200323 20:51:16.599"></status>
 </test>
 <doc>Python and Robot Framework.</doc>
-<status starttime="20200323 20:50:51.545" endtime="20200323 20:50:51.645" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.610" starttime="20200323 20:51:16.579"></status>
 </suite>
-<suite source="/var/lib/jenkins/workspace/robot/number_test.robot" id="s1-s2" name="Number Test">
+<suite id="s1-s2" source="/var/lib/jenkins/workspace/robot/number_test.robot" name="Number Test">
 <test id="s1-s2-t1" name="Search for the minimum.">
-<kw library="libraries.ArrayGeneratorLibrary" name="Find minimum">
+<kw name="Find minimum" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${5}</arg>
 <arg>${10}</arg>
@@ -308,18 +308,18 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.648">${min} = 5</msg>
-<status starttime="20200323 20:50:51.648" endtime="20200323 20:50:51.648" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.614" level="INFO">${min} = 5</msg>
+<status status="PASS" endtime="20200323 20:51:16.614" starttime="20200323 20:51:16.613"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${min}</arg>
 <arg>${5}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.648" endtime="20200323 20:50:51.649" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.614" starttime="20200323 20:51:16.614"></status>
 </kw>
-<kw library="libraries.ArrayGeneratorLibrary" name="Find minimum">
+<kw name="Find minimum" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${0}</arg>
 <arg>${-5}</arg>
@@ -327,18 +327,18 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.649">${min} = -5</msg>
-<status starttime="20200323 20:50:51.649" endtime="20200323 20:50:51.649" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.614" level="INFO">${min} = -5</msg>
+<status status="PASS" endtime="20200323 20:51:16.614" starttime="20200323 20:51:16.614"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${min}</arg>
 <arg>${-5}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.649" endtime="20200323 20:50:51.650" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.615" starttime="20200323 20:51:16.614"></status>
 </kw>
-<kw library="libraries.ArrayGeneratorLibrary" name="Find minimum">
+<kw name="Find minimum" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${5}</arg>
 <arg>${5}</arg>
@@ -346,24 +346,24 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.650">${min} = 5</msg>
-<status starttime="20200323 20:50:51.650" endtime="20200323 20:50:51.650" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.615" level="INFO">${min} = 5</msg>
+<status status="PASS" endtime="20200323 20:51:16.615" starttime="20200323 20:51:16.615"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${min}</arg>
 <arg>${5}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.650" endtime="20200323 20:50:51.650" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.615" starttime="20200323 20:51:16.615"></status>
 </kw>
 <tags>
 <tag>SimpleTest</tag>
 </tags>
-<status starttime="20200323 20:50:51.647" endtime="20200323 20:50:51.650" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:16.616" starttime="20200323 20:51:16.613"></status>
 </test>
 <test id="s1-s2-t2" name="Search for the maximum.">
-<kw library="libraries.ArrayGeneratorLibrary" name="Find maximum">
+<kw name="Find maximum" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${5}</arg>
 <arg>${10}</arg>
@@ -371,18 +371,18 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.651">${min} = 10</msg>
-<status starttime="20200323 20:50:51.651" endtime="20200323 20:50:51.651" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.617" level="INFO">${min} = 10</msg>
+<status status="PASS" endtime="20200323 20:51:16.617" starttime="20200323 20:51:16.616"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${min}</arg>
 <arg>${10}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.652" endtime="20200323 20:50:51.652" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.617" starttime="20200323 20:51:16.617"></status>
 </kw>
-<kw library="libraries.ArrayGeneratorLibrary" name="Find maximum">
+<kw name="Find maximum" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${0}</arg>
 <arg>${-5}</arg>
@@ -390,18 +390,18 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.652">${min} = 0</msg>
-<status starttime="20200323 20:50:51.652" endtime="20200323 20:50:51.652" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.618" level="INFO">${min} = 0</msg>
+<status status="PASS" endtime="20200323 20:51:16.618" starttime="20200323 20:51:16.617"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${min}</arg>
 <arg>${0}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.653" endtime="20200323 20:50:51.653" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.618" starttime="20200323 20:51:16.618"></status>
 </kw>
-<kw library="libraries.ArrayGeneratorLibrary" name="Find maximum">
+<kw name="Find maximum" library="libraries.ArrayGeneratorLibrary">
 <arguments>
 <arg>${5}</arg>
 <arg>${5}</arg>
@@ -409,28 +409,28 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:51.653">${min} = 5</msg>
-<status starttime="20200323 20:50:51.653" endtime="20200323 20:50:51.653" status="PASS"></status>
+<msg timestamp="20200323 20:51:16.618" level="INFO">${min} = 5</msg>
+<status status="PASS" endtime="20200323 20:51:16.618" starttime="20200323 20:51:16.618"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${min}</arg>
 <arg>${5}</arg>
 </arguments>
-<status starttime="20200323 20:50:51.653" endtime="20200323 20:50:51.654" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.619" starttime="20200323 20:51:16.618"></status>
 </kw>
 <tags>
 <tag>SimpleTest</tag>
 </tags>
-<status starttime="20200323 20:50:51.651" endtime="20200323 20:50:51.654" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:16.619" starttime="20200323 20:51:16.616"></status>
 </test>
 <doc>Robot Framework tests.</doc>
-<status starttime="20200323 20:50:51.645" endtime="20200323 20:50:51.654" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:16.619" starttime="20200323 20:51:16.611"></status>
 </suite>
-<suite source="/var/lib/jenkins/workspace/robot/statistics_test.robot" id="s1-s3" name="Statistics Test">
+<suite id="s1-s3" source="/var/lib/jenkins/workspace/robot/statistics_test.robot" name="Statistics Test">
 <test id="s1-s3-t1" name="Generate valid uniform array">
-<kw library="libraries.Distributions" name="Generate uniform array">
+<kw name="Generate uniform array" library="libraries.Distributions">
 <arguments>
 <arg>${low}</arg>
 <arg>${up}</arg>
@@ -439,10 +439,10 @@
 <assign>
 <var>${array}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.047">${array} = [ 6  9 65 ... 86 13 72]</msg>
-<status starttime="20200323 20:50:52.046" endtime="20200323 20:50:52.047" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.014" level="INFO">${array} = [ 8 49 22 ...  9 75 22]</msg>
+<status status="PASS" endtime="20200323 20:51:17.014" starttime="20200323 20:51:17.013"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($array)</arg>
@@ -450,10 +450,10 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.048">${length} = 10000</msg>
-<status starttime="20200323 20:50:52.048" endtime="20200323 20:50:52.048" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.015" level="INFO">${length} = 10000</msg>
+<status status="PASS" endtime="20200323 20:51:17.015" starttime="20200323 20:51:17.015"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>min($array)</arg>
@@ -461,10 +461,10 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.050">${min} = 1</msg>
-<status starttime="20200323 20:50:52.049" endtime="20200323 20:50:52.050" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.017" level="INFO">${min} = 1</msg>
+<status status="PASS" endtime="20200323 20:51:17.017" starttime="20200323 20:51:17.016"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>max($array)</arg>
@@ -472,10 +472,10 @@
 <assign>
 <var>${max}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.052">${max} = 99</msg>
-<status starttime="20200323 20:50:52.051" endtime="20200323 20:50:52.052" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.019" level="INFO">${max} = 99</msg>
+<status status="PASS" endtime="20200323 20:51:17.019" starttime="20200323 20:51:17.018"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>($up + $low) / 2</arg>
@@ -483,10 +483,10 @@
 <assign>
 <var>${m_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.053">${m_theory} = 50.5</msg>
-<status starttime="20200323 20:50:52.053" endtime="20200323 20:50:52.053" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.020" level="INFO">${m_theory} = 50.5</msg>
+<status status="PASS" endtime="20200323 20:51:17.020" starttime="20200323 20:51:17.020"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$array.mean()</arg>
@@ -494,10 +494,10 @@
 <assign>
 <var>${m_practice}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.054">${m_practice} = 50.211</msg>
-<status starttime="20200323 20:50:52.053" endtime="20200323 20:50:52.054" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.021" level="INFO">${m_practice} = 49.8871</msg>
+<status status="PASS" endtime="20200323 20:51:17.021" starttime="20200323 20:51:17.020"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>(($up - $low + 1)**2 - 1) / 12</arg>
@@ -505,8 +505,8 @@
 <assign>
 <var>${d_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.055">${d_theory} = 833.25</msg>
-<status starttime="20200323 20:50:52.054" endtime="20200323 20:50:52.055" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.022" level="INFO">${d_theory} = 833.25</msg>
+<status status="PASS" endtime="20200323 20:51:17.022" starttime="20200323 20:51:17.022"></status>
 </kw>
 <kw name="Find deviation">
 <arguments>
@@ -516,7 +516,7 @@
 <assign>
 <var>${d_practice}</var>
 </assign>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>sum((xi - ${m_theory})**2 for xi in $array) / len($array)</arg>
@@ -524,56 +524,56 @@
 <assign>
 <var>${deviation}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.087">${deviation} = 818.2992</msg>
-<status starttime="20200323 20:50:52.056" endtime="20200323 20:50:52.087" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.053" level="INFO">${deviation} = 817.1512</msg>
+<status status="PASS" endtime="20200323 20:51:17.053" starttime="20200323 20:51:17.023"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:52.088">${d_practice} = 818.2992</msg>
-<status starttime="20200323 20:50:52.055" endtime="20200323 20:50:52.088" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.053" level="INFO">${d_practice} = 817.1512</msg>
+<status status="PASS" endtime="20200323 20:51:17.053" starttime="20200323 20:51:17.023"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${length}</arg>
 <arg>${size}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.088" endtime="20200323 20:50:52.088" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.054" starttime="20200323 20:51:17.054"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${min} &gt;= ${low}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.088" endtime="20200323 20:50:52.089" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.054" starttime="20200323 20:51:17.054"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${max} &lt;= ${up}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.089" endtime="20200323 20:50:52.089" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.055" starttime="20200323 20:51:17.055"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${m_theory} - ${m_practice}) / max(${m_practice}, ${m_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.090" endtime="20200323 20:50:52.090" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.056" starttime="20200323 20:51:17.055"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${d_theory} - ${d_practice}) / max(${d_practice}, ${d_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.090" endtime="20200323 20:50:52.091" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.056" starttime="20200323 20:51:17.056"></status>
 </kw>
 <doc>Uniform distribution test.Comparison of expectation and deviation.</doc>
 <tags>
 <tag>SimpleTest</tag>
 </tags>
-<status starttime="20200323 20:50:52.046" endtime="20200323 20:50:52.091" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:17.056" starttime="20200323 20:51:17.013"></status>
 </test>
 <test id="s1-s3-t2" name="Generate valid binomial array">
-<kw library="libraries.Distributions" name="Generate binomial array">
+<kw name="Generate binomial array" library="libraries.Distributions">
 <arguments>
 <arg>${p}</arg>
 <arg>${n}</arg>
@@ -582,10 +582,10 @@
 <assign>
 <var>${array}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.094">${array} = [ 8  8 13 ...  9 10 14]</msg>
-<status starttime="20200323 20:50:52.092" endtime="20200323 20:50:52.094" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.059" level="INFO">${array} = [ 7  9 11 ...  9 12 10]</msg>
+<status status="PASS" endtime="20200323 20:51:17.059" starttime="20200323 20:51:17.057"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($array)</arg>
@@ -593,10 +593,10 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.095">${length} = 10000</msg>
-<status starttime="20200323 20:50:52.094" endtime="20200323 20:50:52.095" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.060" level="INFO">${length} = 10000</msg>
+<status status="PASS" endtime="20200323 20:51:17.060" starttime="20200323 20:51:17.059"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>min($array)</arg>
@@ -604,10 +604,10 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.097">${min} = 2</msg>
-<status starttime="20200323 20:50:52.095" endtime="20200323 20:50:52.097" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.062" level="INFO">${min} = 2</msg>
+<status status="PASS" endtime="20200323 20:51:17.062" starttime="20200323 20:51:17.060"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>max($array)</arg>
@@ -615,10 +615,10 @@
 <assign>
 <var>${max}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.099">${max} = 18</msg>
-<status starttime="20200323 20:50:52.097" endtime="20200323 20:50:52.100" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.064" level="INFO">${max} = 18</msg>
+<status status="PASS" endtime="20200323 20:51:17.064" starttime="20200323 20:51:17.062"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$n * $p</arg>
@@ -626,10 +626,10 @@
 <assign>
 <var>${m_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.100">${m_theory} = 10.0</msg>
-<status starttime="20200323 20:50:52.100" endtime="20200323 20:50:52.100" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.065" level="INFO">${m_theory} = 10.0</msg>
+<status status="PASS" endtime="20200323 20:51:17.065" starttime="20200323 20:51:17.064"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$array.mean()</arg>
@@ -637,10 +637,10 @@
 <assign>
 <var>${m_practice}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.101">${m_practice} = 9.9733</msg>
-<status starttime="20200323 20:50:52.101" endtime="20200323 20:50:52.102" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.066" level="INFO">${m_practice} = 9.9756</msg>
+<status status="PASS" endtime="20200323 20:51:17.066" starttime="20200323 20:51:17.065"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>($p * $n * (1-$p))</arg>
@@ -648,8 +648,8 @@
 <assign>
 <var>${d_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.103">${d_theory} = 5.0</msg>
-<status starttime="20200323 20:50:52.102" endtime="20200323 20:50:52.103" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.067" level="INFO">${d_theory} = 5.0</msg>
+<status status="PASS" endtime="20200323 20:51:17.067" starttime="20200323 20:51:17.066"></status>
 </kw>
 <kw name="Find deviation">
 <arguments>
@@ -659,7 +659,7 @@
 <assign>
 <var>${d_practice}</var>
 </assign>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>sum((xi - ${m_theory})**2 for xi in $array) / len($array)</arg>
@@ -667,56 +667,56 @@
 <assign>
 <var>${deviation}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.132">${deviation} = 4.9843</msg>
-<status starttime="20200323 20:50:52.103" endtime="20200323 20:50:52.132" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.097" level="INFO">${deviation} = 5.0192</msg>
+<status status="PASS" endtime="20200323 20:51:17.097" starttime="20200323 20:51:17.067"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:52.133">${d_practice} = 4.9843</msg>
-<status starttime="20200323 20:50:52.103" endtime="20200323 20:50:52.133" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.097" level="INFO">${d_practice} = 5.0192</msg>
+<status status="PASS" endtime="20200323 20:51:17.097" starttime="20200323 20:51:17.067"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${length}</arg>
 <arg>${size}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.133" endtime="20200323 20:50:52.133" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.098" starttime="20200323 20:51:17.097"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${min} &gt;= ${0}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.134" endtime="20200323 20:50:52.134" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.098" starttime="20200323 20:51:17.098"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${max} &lt;= ${n}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.134" endtime="20200323 20:50:52.134" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.098" starttime="20200323 20:51:17.098"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${m_theory} - ${m_practice}) / max(${m_practice}, ${m_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.134" endtime="20200323 20:50:52.135" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.099" starttime="20200323 20:51:17.099"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${d_theory} - ${d_practice}) / max(${d_practice}, ${d_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.135" endtime="20200323 20:50:52.136" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.100" starttime="20200323 20:51:17.099"></status>
 </kw>
 <doc>Binomial distribution test. Comparison of expectation and deviation.</doc>
 <tags>
 <tag>SimpleTest</tag>
 </tags>
-<status starttime="20200323 20:50:52.091" endtime="20200323 20:50:52.136" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:17.100" starttime="20200323 20:51:17.057"></status>
 </test>
 <test id="s1-s3-t3" name="Generate valid geometric array">
-<kw library="libraries.Distributions" name="Generate geometric array">
+<kw name="Generate geometric array" library="libraries.Distributions">
 <arguments>
 <arg>${p}</arg>
 <arg>${size}</arg>
@@ -724,10 +724,10 @@
 <assign>
 <var>${array}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.138">${array} = [2 1 4 ... 1 4 1]</msg>
-<status starttime="20200323 20:50:52.137" endtime="20200323 20:50:52.138" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.102" level="INFO">${array} = [2 2 9 ... 1 1 1]</msg>
+<status status="PASS" endtime="20200323 20:51:17.102" starttime="20200323 20:51:17.101"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($array)</arg>
@@ -735,10 +735,10 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.139">${length} = 10000</msg>
-<status starttime="20200323 20:50:52.138" endtime="20200323 20:50:52.139" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.103" level="INFO">${length} = 10000</msg>
+<status status="PASS" endtime="20200323 20:51:17.103" starttime="20200323 20:51:17.102"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>min($array)</arg>
@@ -746,10 +746,10 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.140">${min} = 1</msg>
-<status starttime="20200323 20:50:52.139" endtime="20200323 20:50:52.141" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.105" level="INFO">${min} = 1</msg>
+<status status="PASS" endtime="20200323 20:51:17.105" starttime="20200323 20:51:17.103"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>1/$p</arg>
@@ -757,10 +757,10 @@
 <assign>
 <var>${m_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.141">${m_theory} = 2.0</msg>
-<status starttime="20200323 20:50:52.141" endtime="20200323 20:50:52.141" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.105" level="INFO">${m_theory} = 2.0</msg>
+<status status="PASS" endtime="20200323 20:51:17.105" starttime="20200323 20:51:17.105"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$array.mean()</arg>
@@ -768,10 +768,10 @@
 <assign>
 <var>${m_practice}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.142">${m_practice} = 1.9831</msg>
-<status starttime="20200323 20:50:52.142" endtime="20200323 20:50:52.143" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.107" level="INFO">${m_practice} = 1.9845</msg>
+<status status="PASS" endtime="20200323 20:51:17.107" starttime="20200323 20:51:17.106"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>(1-$p)/($p**2)</arg>
@@ -779,8 +779,8 @@
 <assign>
 <var>${d_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.143">${d_theory} = 2.0</msg>
-<status starttime="20200323 20:50:52.143" endtime="20200323 20:50:52.143" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.107" level="INFO">${d_theory} = 2.0</msg>
+<status status="PASS" endtime="20200323 20:51:17.108" starttime="20200323 20:51:17.107"></status>
 </kw>
 <kw name="Find deviation">
 <arguments>
@@ -790,7 +790,7 @@
 <assign>
 <var>${d_practice}</var>
 </assign>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>sum((xi - ${m_theory})**2 for xi in $array) / len($array)</arg>
@@ -798,53 +798,53 @@
 <assign>
 <var>${deviation}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.173">${deviation} = 1.9211</msg>
-<status starttime="20200323 20:50:52.144" endtime="20200323 20:50:52.173" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.138" level="INFO">${deviation} = 1.9639</msg>
+<status status="PASS" endtime="20200323 20:51:17.138" starttime="20200323 20:51:17.108"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:52.173">${d_practice} = 1.9211</msg>
-<status starttime="20200323 20:50:52.144" endtime="20200323 20:50:52.173" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.138" level="INFO">${d_practice} = 1.9639</msg>
+<status status="PASS" endtime="20200323 20:51:17.138" starttime="20200323 20:51:17.108"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${length}</arg>
 <arg>${size}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.173" endtime="20200323 20:50:52.174" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.138" starttime="20200323 20:51:17.138"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${min} &gt;= ${0}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.174" endtime="20200323 20:50:52.174" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.139" starttime="20200323 20:51:17.139"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${m_theory} - ${m_practice}) / max(${m_practice}, ${m_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.174" endtime="20200323 20:50:52.175" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.140" starttime="20200323 20:51:17.139"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${d_theory} - ${d_practice}) / max(${d_practice}, ${d_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.175" endtime="20200323 20:50:52.176" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.140" starttime="20200323 20:51:17.140"></status>
 </kw>
 <doc>geometric distribution test. Comparison of expectation and deviation.</doc>
 <tags>
 <tag>SimpleTest</tag>
 </tags>
-<status starttime="20200323 20:50:52.136" endtime="20200323 20:50:52.176" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:17.141" starttime="20200323 20:51:17.100"></status>
 </test>
 <test id="s1-s3-t4" name="Generate valid poisson array">
 <kw name="Generate poisson array with mu ${mu} and size ${size}">
 <assign>
 <var>${array}</var>
 </assign>
-<kw library="libraries.Distributions" name="Generate poisson array">
+<kw name="Generate poisson array" library="libraries.Distributions">
 <arguments>
 <arg>${mu}</arg>
 <arg>${size}</arg>
@@ -852,13 +852,13 @@
 <assign>
 <var>${result}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.180">${result} = [ 9 13 11 ...  8  8  8]</msg>
-<status starttime="20200323 20:50:52.177" endtime="20200323 20:50:52.180" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.145" level="INFO">${result} = [14  8  9 ...  8 12  6]</msg>
+<status status="PASS" endtime="20200323 20:51:17.145" starttime="20200323 20:51:17.142"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:52.180">${array} = [ 9 13 11 ...  8  8  8]</msg>
-<status starttime="20200323 20:50:52.177" endtime="20200323 20:50:52.180" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.145" level="INFO">${array} = [14  8  9 ...  8 12  6]</msg>
+<status status="PASS" endtime="20200323 20:51:17.145" starttime="20200323 20:51:17.142"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>len($array)</arg>
@@ -866,10 +866,10 @@
 <assign>
 <var>${length}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.181">${length} = 10000</msg>
-<status starttime="20200323 20:50:52.180" endtime="20200323 20:50:52.181" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.146" level="INFO">${length} = 10000</msg>
+<status status="PASS" endtime="20200323 20:51:17.146" starttime="20200323 20:51:17.145"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>min($array)</arg>
@@ -877,10 +877,10 @@
 <assign>
 <var>${min}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.183">${min} = 1</msg>
-<status starttime="20200323 20:50:52.181" endtime="20200323 20:50:52.183" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.148" level="INFO">${min} = 1</msg>
+<status status="PASS" endtime="20200323 20:51:17.148" starttime="20200323 20:51:17.146"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$mu</arg>
@@ -888,10 +888,10 @@
 <assign>
 <var>${m_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.184">${m_theory} = 10</msg>
-<status starttime="20200323 20:50:52.183" endtime="20200323 20:50:52.184" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.149" level="INFO">${m_theory} = 10</msg>
+<status status="PASS" endtime="20200323 20:51:17.149" starttime="20200323 20:51:17.148"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$array.mean()</arg>
@@ -899,10 +899,10 @@
 <assign>
 <var>${m_practice}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.185">${m_practice} = 9.9541</msg>
-<status starttime="20200323 20:50:52.184" endtime="20200323 20:50:52.185" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.150" level="INFO">${m_practice} = 9.9691</msg>
+<status status="PASS" endtime="20200323 20:51:17.150" starttime="20200323 20:51:17.149"></status>
 </kw>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>$mu</arg>
@@ -910,8 +910,8 @@
 <assign>
 <var>${d_theory}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.186">${d_theory} = 10</msg>
-<status starttime="20200323 20:50:52.185" endtime="20200323 20:50:52.186" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.151" level="INFO">${d_theory} = 10</msg>
+<status status="PASS" endtime="20200323 20:51:17.151" starttime="20200323 20:51:17.150"></status>
 </kw>
 <kw name="Find deviation">
 <arguments>
@@ -921,7 +921,7 @@
 <assign>
 <var>${d_practice}</var>
 </assign>
-<kw library="BuiltIn" name="Evaluate">
+<kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
 <arg>sum((xi - ${m_theory})**2 for xi in $array) / len($array)</arg>
@@ -929,67 +929,67 @@
 <assign>
 <var>${deviation}</var>
 </assign>
-<msg level="INFO" timestamp="20200323 20:50:52.195">${deviation} = 10.0041</msg>
-<status starttime="20200323 20:50:52.187" endtime="20200323 20:50:52.195" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.160" level="INFO">${deviation} = 9.8451</msg>
+<status status="PASS" endtime="20200323 20:51:17.160" starttime="20200323 20:51:17.151"></status>
 </kw>
-<msg level="INFO" timestamp="20200323 20:50:52.195">${d_practice} = 10.0041</msg>
-<status starttime="20200323 20:50:52.186" endtime="20200323 20:50:52.195" status="PASS"></status>
+<msg timestamp="20200323 20:51:17.161" level="INFO">${d_practice} = 9.8451</msg>
+<status status="PASS" endtime="20200323 20:51:17.161" starttime="20200323 20:51:17.151"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be Equal">
+<kw name="Should Be Equal" library="BuiltIn">
 <doc>Fails if the given objects are unequal.</doc>
 <arguments>
 <arg>${length}</arg>
 <arg>${size}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.195" endtime="20200323 20:50:52.195" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.161" starttime="20200323 20:51:17.161"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>${min} &gt;= ${0}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.196" endtime="20200323 20:50:52.196" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.162" starttime="20200323 20:51:17.161"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${m_theory} - ${m_practice}) / max(${m_practice}, ${m_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.196" endtime="20200323 20:50:52.197" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.162" starttime="20200323 20:51:17.162"></status>
 </kw>
-<kw library="BuiltIn" name="Should Be True">
+<kw name="Should Be True" library="BuiltIn">
 <doc>Fails if the given condition is not true.</doc>
 <arguments>
 <arg>abs(${d_theory} - ${d_practice}) / max(${d_practice}, ${d_theory}) &lt;= ${e}</arg>
 </arguments>
-<status starttime="20200323 20:50:52.197" endtime="20200323 20:50:52.197" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.163" starttime="20200323 20:51:17.162"></status>
 </kw>
 <doc>Poisson distribution test. Comparison of expectation and deviation.</doc>
 <tags>
 <tag>MiddleTest</tag>
 </tags>
-<status starttime="20200323 20:50:52.176" endtime="20200323 20:50:52.197" critical="yes" status="PASS"></status>
+<status status="PASS" critical="yes" endtime="20200323 20:51:17.163" starttime="20200323 20:51:17.141"></status>
 </test>
 <doc>Discrete distribution and Robot Framework.</doc>
-<status starttime="20200323 20:50:51.655" endtime="20200323 20:50:52.198" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.164" starttime="20200323 20:51:16.620"></status>
 </suite>
-<status starttime="20200323 20:50:51.523" endtime="20200323 20:50:52.199" status="PASS"></status>
+<status status="PASS" endtime="20200323 20:51:17.165" starttime="20200323 20:51:16.555"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="9">Critical Tests</stat>
-<stat fail="0" pass="9">All Tests</stat>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">HardTest</stat>
-<stat fail="0" pass="2">MiddleTest</stat>
-<stat fail="0" pass="6">SimpleTest</stat>
+<stat pass="1" fail="0">HardTest</stat>
+<stat pass="2" fail="0">MiddleTest</stat>
+<stat pass="6" fail="0">SimpleTest</stat>
 </tag>
 <suite>
-<stat fail="0" pass="9" name="Array Test &amp; Number Test &amp; Statistics Test" id="s1">Array Test &amp; Number Test &amp; Statistics Test</stat>
-<stat fail="0" pass="3" name="Array Test" id="s1-s1">Array Test &amp; Number Test &amp; Statistics Test.Array Test</stat>
-<stat fail="0" pass="2" name="Number Test" id="s1-s2">Array Test &amp; Number Test &amp; Statistics Test.Number Test</stat>
-<stat fail="0" pass="4" name="Statistics Test" id="s1-s3">Array Test &amp; Number Test &amp; Statistics Test.Statistics Test</stat>
+<stat pass="9" fail="0" name="Array Test &amp; Number Test &amp; Statistics Test" id="s1">Array Test &amp; Number Test &amp; Statistics Test</stat>
+<stat pass="3" fail="0" name="Array Test" id="s1-s1">Array Test &amp; Number Test &amp; Statistics Test.Array Test</stat>
+<stat pass="2" fail="0" name="Number Test" id="s1-s2">Array Test &amp; Number Test &amp; Statistics Test.Number Test</stat>
+<stat pass="4" fail="0" name="Statistics Test" id="s1-s3">Array Test &amp; Number Test &amp; Statistics Test.Statistics Test</stat>
 </suite>
 </statistics>
 <errors>
