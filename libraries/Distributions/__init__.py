@@ -20,5 +20,4 @@ class Distributions:
 
     @keyword("Generate poisson array")
     def get_poisson_distribution(self, mu, size):
-    # mu = 10
         return poisson.rvs(mu=mu, size=size)
