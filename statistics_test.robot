@@ -90,7 +90,7 @@ Generate valid poisson array
 
 Find deviation
     [Arguments]     ${array}    ${m_theory}
-    ${deviation}    Evaluate    sum((xi - ${m_theory}) ** 2 for xi in $array) / len($array)
+    ${deviation}    Evaluate    sum((xi - ${m_theory})**2 for xi in $array) / len($array)
     [Return]        ${deviation}
 
 Generate poisson array with mu ${mu} and size ${size}
