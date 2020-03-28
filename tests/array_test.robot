@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       Python and Robot Framework.
-Library             libraries.ArrayGeneratorLibrary
+Library             ./libraries.ArrayGeneratorLibrary
 
 *** Variables ***
 ${minimum}        ${1}
