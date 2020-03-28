@@ -39,17 +39,14 @@ pipeline {
                     otherFiles          : "**/*.png,**/*.jpg",
                   ]
                 )
-              step(
-                  [
-                    $class: 'GitHubCommitStatusSetter',
-                    contextSource: [$class: 'ManuallyEnteredCommitContextSource',
-                                    context: 'Robot tests'],
-                    statusResultSource: [$class: 'ConditionalStatusResultSource',
-                                         results: [[$class: 'AnyBuildResult',
-                                                     state: 'SUCCESS',
-                                                     message: "Tests passed successfully"]]]])
+              
             }
-        }   
-      }    
-
-}
+          }  
+          success {
+            setBuildStatus("Build succeeded", "SUCCESS");
+          }
+          failure {
+            setBuildStatus("Build failed", "FAILURE");
+          }
+  } 
+}  
