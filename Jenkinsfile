@@ -39,6 +39,7 @@ pipeline {
                     otherFiles          : "**/*.png,**/*.jpg",
                   ]
                 )
+              step([$class: 'GitHubCommitStatusSetter', contextSource: [$class: 'ManuallyEnteredCommitContextSource', context: 'pylint'], statusResultSource: [$class: 'ConditionalStatusResultSource', results: [[$class: 'AnyBuildResult', state: 'SUCCESS', message: "Succeeded"]]]])
             }
         }   
       }    
