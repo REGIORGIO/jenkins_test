@@ -19,7 +19,6 @@ pipeline {
          steps {
                sh 'mkdir -p reports'
                sh 'python3 -m robot.run  --outputdir reports .'
-               
                }
         }
          
