@@ -18,7 +18,7 @@ pipeline {
        stage('Run Robot Tests') {
          steps {
                sh 'mkdir -p reports'
-               sh 'python3 -m robot.run  --outputdir reports statistics_test.robot array_test.robot number_test.robot'
+               sh 'python3 -m robot.run  --outputdir reports .'
                
                }
         }
