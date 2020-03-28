@@ -18,7 +18,7 @@ pipeline {
        stage('Run Robot Tests') {
          steps {
                sh 'mkdir -p reports'
-               sh 'python3 -m robot.run  --outputdir reports .'
+               sh 'python3 -m robot.run  --outputdir results .'
                }
         }
          
@@ -29,7 +29,7 @@ pipeline {
               step(
                   [
                     $class              : 'RobotPublisher',
-                    outputPath          : 'reports',
+                    outputPath          : 'results',
                     outputFileName      : 'output.xml',
                     reportFileName      : 'report.html',
                     logFileName         : 'log.html',
