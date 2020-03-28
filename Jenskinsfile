@@ -1,0 +1,35 @@
+#!groovy
+pipeline {
+    agent { 
+        label 'master'
+        }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+         }
+        }
+      stage('Preparations') {
+         steps {
+            sh 'pip3 install -r requirements.txt' 
+            
+         }
+      stage('Tests') {
+         steps {
+            sh 'python3 -m robot array_test.robot number_test.robot  statistics_test.robot' 
+            
+         }
+      }
+   }
+}
+post {
+        always {
+            archive (includes: 'reports/*.html')
+        }
+    }
+}
