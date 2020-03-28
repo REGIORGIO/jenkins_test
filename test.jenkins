@@ -20,24 +20,8 @@ pipeline {
                sh 'python3 -m robot.run statistics_test.robot'
                sh 'exit 0'
                }
-         post {
-         always {
-              script {
-                step(
-                     [
-                       $class              : 'RobotPublisher',
-                       outputFileName      : 'output.xml',
-                       reportFileName      : 'report.html',
-                       logFileName         : 'log.html',
-                       disableArchiveOutput: false,
-                       passThreshold       : 50,
-                       unstableThreshold   : 40,
-                       otherFiles          : "**/*.png,**/*.jpg",
-                     ]
-                  )
-              }
-         }     
-       }
+        }
+         
    }    
 
 }
