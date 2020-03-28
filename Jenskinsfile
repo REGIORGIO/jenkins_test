@@ -1,35 +1,17 @@
 pipeline {
-    agent any
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: "master", url:'https://github.com/REGIORGIO/jenkins_test'
-            }
+   agent any
+
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+         }
         }
-        stage('Preparation') {
-            steps{
-                cd /var/lib/jenkins/workspace/robot   
-            }
+      stage('Test') {
+         steps {
+            sh 'cd /var/lib/jenkins/workspace/robot' 
             
-            steps{
-                pip3 install -r requirements.txt 
-            }    
-        }
-        stage('test') {
-            steps{
-                cd /var/lib/jenkins/workspace/robot
-            }
-            steps{
-                python3 -m robot array_test.robot number_test.robot  statistics_test.robot
-            }
-
-
-            }
-        }
-    }
-    post {
-        always {
-            archive (includes: 'reports/*.html')
-        }
-    }
+         }
+      }
+   }
 }
