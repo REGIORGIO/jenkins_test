@@ -9,27 +9,35 @@ pipeline {
     }
 
    stages {
-      stage('Hello') {
+       stage('intialize') {
          steps {
-            echo 'Hello World'
+           sh 'echo "PATH= ${PATH}'
          }
-        }
-      stage('Preparations') {
+       }
+    
+       stage('Run Robot Tests') {
          steps {
-            sh 'pip3 install -r requirements.txt' 
-            
-         }
-      stage('Tests') {
-         steps {
-            sh 'python3 -m robot array_test.robot number_test.robot  statistics_test.robot' 
-            
-         }
-      }
-   }
-}
-post {
-        always {
-            archive (includes: 'reports/*.html')
-        }
-    }
+               sh 'python3 -m robot.run statistics_test.robot'
+               sh 'exit 0'
+               }
+         post {
+         always {
+              script {
+                step(
+                     [
+                       $class              : 'RobotPublisher',
+                       outputFileName      : 'output.xml',
+                       reportFileName      : 'report.html',
+                       logFileName         : 'log.html',
+                       disableArchiveOutput: false,
+                       passThreshold       : 50,
+                       unstableThreshold   : 40,
+                       otherFiles          : "**/*.png,**/*.jpg",
+                     ]
+                  )
+              }
+         }     
+       }
+   }    
+
 }
