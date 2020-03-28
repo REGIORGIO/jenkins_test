@@ -9,9 +9,9 @@ pipeline {
     }
 
    stages {
-       stage('Checkout') {
+       stage('Preparation') {
             steps {
-                git branch: "master", https://github.com/REGIORGIO/jenkins_test'
+                sh 'pip3 install -r requirements.txt'
             }
         }
     
