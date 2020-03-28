@@ -35,7 +35,7 @@ pipeline {
                     reportFileName      : 'report.html',
                     logFileName         : 'log.html',
                     disableArchiveOutput: false,
-                    passThreshold       : 50,
+                    passThreshold       : 80,
                     unstableThreshold   : 40,
                     otherFiles          : "**/*.png,**/*.jpg",
                   ]
