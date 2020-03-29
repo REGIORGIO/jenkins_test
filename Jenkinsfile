@@ -27,7 +27,7 @@ pipeline {
        stage('Run Robot Tests') {
          steps {
                sh 'mkdir -p reports'
-               sh 'python3 -m robot.run  --outputdir results .'
+               sh 'python3 -m robot.run  --outputdir results --noncritical SimpleTest .'
                }
         }
          

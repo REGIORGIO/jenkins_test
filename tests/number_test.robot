@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation       Robot Framework tests.
-Library             libraries.ArrayGeneratorLibrary
+Library             ./libraries.Numbers
 
 *** Test Cases ***
 Search for the minimum.
