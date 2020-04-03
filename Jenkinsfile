@@ -48,7 +48,7 @@ pipeline {
                     otherFiles          : "**/*.png,**/*.jpg",
                   ]
                 )
-              bash <(curl -s https://codecov.io/bash)
+              sh 'bash <(curl -s https://codecov.io/bash)'
             }
           }  
           success {
