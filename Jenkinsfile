@@ -39,7 +39,7 @@ pipeline {
                   [
                     $class              : 'RobotPublisher',
                     outputPath          : 'results',
-                    outputFileName      : 'output.xml',
+                    outputFileName      : 'report.xml',
                     reportFileName      : 'report.html',
                     logFileName         : 'log.html',
                     disableArchiveOutput: false,
