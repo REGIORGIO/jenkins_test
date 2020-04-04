@@ -1,6 +1,5 @@
 from libraries.Distributions import Distributions 
 
-
 low = 1
 up = 10
 size = 10
