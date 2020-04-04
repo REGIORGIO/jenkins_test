@@ -53,6 +53,11 @@ pipeline {
           }  
           success {
             setBuildStatus("Build succeeded", "SUCCESS");
+            
+            script {
+              sh 'docker build .'
+            }
+              
           }
           failure {
             setBuildStatus("Build failed", "FAILURE");
