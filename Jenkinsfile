@@ -55,10 +55,7 @@ pipeline {
             setBuildStatus("Build succeeded", "SUCCESS");
             
             script {
-              withCredentials([usernamePassword(credentialsId: 'GitHub_REGIORGIO', usernameVariable: 'USERNAME', 
-                                                                                   passwordVariable: 'PASSWORD')]) {
-                    sh 'docker login docker.pkg.github.com -u $USERNAME -p $PASSWORD'
-                  }
+              sh 'cat /home/georgy/jenkins/git_token.txt | docker login docker.pkg.github.com -u REGIORGIO --password-stdin'
               sh 'docker build -t docker.pkg.github.com/regiorgio/jenkins_test/simple_python_script:latest .'
               sh 'docker push docker.pkg.github.com/regiorgio/jenkins_test/simple_python_script:latest'
             }
