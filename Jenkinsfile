@@ -55,7 +55,8 @@ pipeline {
             setBuildStatus("Build succeeded", "SUCCESS");
             
             script {
-              sh 'docker build -t simple_python_script:latest .'
+              sh 'docker build -t docker.pkg.github.com/regiorgio/jenkins_test/simple_python_script:latest .'
+              sh 'docker push docker.pkg.github.com/regiorgio/jenkins_test/simple_python_script:latest
             }
               
           }
