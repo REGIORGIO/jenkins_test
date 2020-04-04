@@ -9,3 +9,5 @@ When you push your code to the ***develop*** branch, Jenkins automatically runs 
 **Results** folder contains log.html, log.html, report.html - these are examples of how the Robot Framework works.
 
 **Jenkinsfile** contains a description of Pipeline in Groovy.
+
+**Dockerfile** contains instructions for building a Docker image
