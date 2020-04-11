@@ -49,7 +49,7 @@ pipeline {
                   ]
                 )
               sh 'cat codecov.yml | curl --data-binary @- https://codecov.io/validate'
-              bash < curl -s https://codecov.io/bash
+              sh 'curl -s https://codecov.io/bash | bash -s'
             }
           }  
           success {
