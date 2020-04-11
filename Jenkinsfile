@@ -27,7 +27,7 @@ pipeline {
        stage('Run Robot Tests') {
          steps {
                sh 'mkdir -p reports'
-               sh 'python3 -m robot.run  --outputdir results --output report.xml  --noncritical SimpleTest .'
+               sh 'python3 -m robot.run  --outputdir results  --noncritical SimpleTest .'
                }
         }
          
@@ -39,7 +39,7 @@ pipeline {
                   [
                     $class              : 'RobotPublisher',
                     outputPath          : 'results',
-                    outputFileName      : 'report.xml',
+                    outputFileName      : 'output.xml',
                     reportFileName      : 'report.html',
                     logFileName         : 'log.html',
                     disableArchiveOutput: false,
