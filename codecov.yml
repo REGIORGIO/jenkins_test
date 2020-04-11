@@ -1,9 +1,18 @@
 codecov:
   token: 31286d5b-6e96-4bb9-8663-6b00e52c8a2e
+  precision: 2
+  round: down
+  range: "70...100"
+  notify:
+    require_ci_to_pass: yes
+
   status:
-    project:
-      default:
-        # basic
-        target: auto
-        threshold: 0%
-        base: auto 
+    project: yes
+
+    patch: yes
+
+    changes: yes
+
+comment:
+  layout: "header, diff, changes"
+  behavior: default
