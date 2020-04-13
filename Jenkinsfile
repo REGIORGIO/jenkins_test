@@ -27,7 +27,7 @@ pipeline {
        stage('Run Robot Tests') {
          steps {
                sh 'mkdir -p reports'
-               sh 'python3 -m robot.run  --outputdir results --noncritical SimpleTest .'
+               sh 'python3 -m robot.run  --outputdir results --output report.xml  --noncritical SimpleTest .'
                }
         }
          
@@ -39,7 +39,7 @@ pipeline {
                   [
                     $class              : 'RobotPublisher',
                     outputPath          : 'results',
-                    outputFileName      : 'output.xml',
+                    outputFileName      : 'report.xml',
                     reportFileName      : 'report.html',
                     logFileName         : 'log.html',
                     disableArchiveOutput: false,
@@ -48,7 +48,8 @@ pipeline {
                     otherFiles          : "**/*.png,**/*.jpg",
                   ]
                 )
-              sh 'curl -s https://codecov.io/bash'
+              sh 'cat codecov.yml | curl --data-binary @- https://codecov.io/validate'
+              sh 'curl -s https://codecov.io/bash | bash -s'
             }
           }  
           success {
