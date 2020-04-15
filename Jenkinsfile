@@ -27,7 +27,8 @@ pipeline {
        stage('Run Robot Tests') {
          steps {
                sh 'mkdir -p reports'
-               sh 'python3 -m robot.run   -x report.xml --outputdir reports  .'
+               sh 'python3 -m coverage run -m robot.run  --outputdir reports  .'
+               sh 'python3 -m coverage xml'
                }
         }
          
