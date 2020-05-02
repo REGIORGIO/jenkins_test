@@ -15,9 +15,9 @@ pipeline {
     }
 
    stages {
-       stage('test') {
+       stage('push') {
             steps {
-                sh 'echo Hello from test'
+                sh 'echo Hello from push'
             }
         }
          
@@ -25,8 +25,7 @@ pipeline {
     post {
            
           success {
-            setBuildStatus("Tests succeeded", "SUCCESS");
-            build 'Push'
+            setBuildStatus("Push succeeded", "SUCCESS");
             
             // script {
             //   sh 'cat /home/georgy/jenkins/git_token.txt | docker login docker.pkg.github.com -u REGIORGIO --password-stdin'
@@ -35,7 +34,7 @@ pipeline {
             // }
           }
           failure {
-            setBuildStatus("Tests failed", "FAILURE");
+            setBuildStatus("Push failed", "FAILURE");
           }
   } 
 }  

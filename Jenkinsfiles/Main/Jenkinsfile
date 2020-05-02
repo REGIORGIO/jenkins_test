@@ -9,9 +9,6 @@ void setBuildStatus(String message, String state) {
   ]);
 }
 pipeline {
-    agent { 
-        label 'master'
-        }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
@@ -59,7 +56,7 @@ pipeline {
             }
           }  
           success {
-            setBuildStatus("Build main succeeded", "SUCCESS");
+            setBuildStatus("Main succeeded", "SUCCESS");
             build 'Test'
             
             // script {
@@ -69,7 +66,7 @@ pipeline {
             // }
           }
           failure {
-            setBuildStatus("Build failed", "FAILURE");
+            setBuildStatus("Main failed", "FAILURE");
           }
   } 
 }  
