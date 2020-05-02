@@ -31,6 +31,11 @@ pipeline {
                sh 'python3 -m coverage xml'
                }
         }
+        // stage('Call next Pipeline') {
+        //  steps {
+              
+        //        }
+        // }
          
    }
     post {
@@ -54,8 +59,9 @@ pipeline {
             }
           }  
           success {
-            setBuildStatus("Build succeeded", "SUCCESS");
-            setBuildStatus("Second Status", "SUCCESS");
+            setBuildStatus("Build main succeeded", "SUCCESS");
+            build 'Test'
+            }
             
             // script {
             //   sh 'cat /home/georgy/jenkins/git_token.txt | docker login docker.pkg.github.com -u REGIORGIO --password-stdin'
