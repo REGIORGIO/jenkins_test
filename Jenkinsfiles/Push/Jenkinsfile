@@ -29,13 +29,14 @@ pipeline {
          
    }
     post {
+         failure {
+              setBuildStatus("Push failed", "FAILURE");
+            }
            
           success {
             setBuildStatus("Push succeeded", "SUCCESS");
             
           }
-          failure {
-            setBuildStatus("Push failed", "FAILURE");
-          }
+         
   } 
 }  

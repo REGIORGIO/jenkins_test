@@ -44,7 +44,10 @@ pipeline {
          
    }
     post {
-           
+          
+          failure {
+            setBuildStatus("Tests failed", "FAILURE");
+          } 
           success {
             setBuildStatus("Tests succeeded", "SUCCESS");
             build 'Push'
@@ -55,8 +58,6 @@ pipeline {
             //   sh 'docker push docker.pkg.github.com/regiorgio/jenkins_test/simple_python_script:latest'
             // }
           }
-          failure {
-            setBuildStatus("Tests failed", "FAILURE");
-          }
-  } 
+          
+        }
 }  
