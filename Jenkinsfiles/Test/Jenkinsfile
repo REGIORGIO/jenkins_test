@@ -19,10 +19,27 @@ pipeline {
     }
 
    stages {
-       stage('test') {
-            steps {
-                sh 'echo Hello from test'
-            }
+        stage('Run Robot Tests') {
+         steps {
+               sh 'mkdir -p reports'
+               sh 'python3 -m coverage run -m robot.run  --outputdir reports  .'
+               sh 'python3 -m coverage xml'
+               step(
+                  [
+                    $class              : 'RobotPublisher',
+                    outputPath          : 'reports',
+                    outputFileName      : 'output.xml',
+                    reportFileName      : 'report.html',
+                    logFileName         : 'log.html',
+                    disableArchiveOutput: false,
+                    passThreshold       : 60,
+                    unstableThreshold   : 40,
+                    otherFiles          : "**/*.png,**/*.jpg",
+                  ]
+                )
+              sh 'cat codecov.yml | curl --data-binary @- https://codecov.io/validate'
+              sh 'curl -s https://codecov.io/bash | bash -s'
+               }
         }
          
    }
