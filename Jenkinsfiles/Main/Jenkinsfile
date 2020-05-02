@@ -61,7 +61,6 @@ pipeline {
           success {
             setBuildStatus("Build main succeeded", "SUCCESS");
             build 'Test'
-            }
             
             // script {
             //   sh 'cat /home/georgy/jenkins/git_token.txt | docker login docker.pkg.github.com -u REGIORGIO --password-stdin'
