@@ -9,6 +9,9 @@ void setBuildStatus(String message, String state) {
   ]);
 }
 pipeline {
+    agent { 
+        label 'master'
+        }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
